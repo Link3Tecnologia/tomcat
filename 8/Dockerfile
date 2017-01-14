@@ -9,3 +9,5 @@ RUN tar xzf $TOMCAT_FILE
 EXPOSE 8080
 RUN ln -s /opt/$TOMCAT_FILE /opt/tomcat
 RUN ["rm", "-fr", "/opt/tomcat/webapps/ROOT"]
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+
