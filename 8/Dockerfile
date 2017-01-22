@@ -12,5 +12,7 @@ RUN tar xzf $TOMCAT_FILE
 EXPOSE 8080
 RUN ln -s /opt/apache-tomcat-$TOMCAT_VERSION /opt/tomcat
 RUN ["rm", "-fr", "/opt/tomcat/webapps/ROOT"]
+RUN yum -y update
+RUN yum -y install apr-devel openssl-devel
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
 
