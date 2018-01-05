@@ -1,5 +1,5 @@
 # link3tecnologia/tomcat:8
-FROM link3tecnologia/centosjava8:7
+FROM link3tecnologia/oraclejava:8
 ENV TOMCAT_VERSION=8.5.9
 ENV TOMCAT_FILE=apache-tomcat-$TOMCAT_VERSION.tar.gz
 ENV CATALINA_HOME=/opt/tomcat
